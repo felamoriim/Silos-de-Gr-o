@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Silo de Grãos</title>
+  <style>
+body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f7f7f7;
+}
+
+header {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+}
+nav {
+      background-color: #f4f4f4;
+      text-align: center;
+      padding: 10px 0;
+}
+    nav a {
+      text-decoration: none;
+      margin: 0 15px;
+      color: #333;
+      font-weight: bold;
+      text-transform: uppercase;
+}
+nav a:hover {
+      color: #555;
+}
+section {
+      background-color: white;
+      padding: 20px;
+      margin: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+h1 {color: white;}
+h2 {
+      color: #333;
+}
+ol {
+      list-style-type: decimal;
+      padding-left: 20px;
+}
+footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+}
+
+.slideshow-container {
+  position: relative;
+  max-width: 100%;
+  margin: auto;
+  text-align: center; /* Alinha as imagens horizontalmente */
+
+}
+
+.mySlides img {
+    display: inline-block; 
+    width: 60%;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: .4
+  }
+  to {
+    opacity: 1
+  }
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+    
+  </style>
+</head>
+<body>
+
+    <header>
+        <h1>Silo de Grãos</h1>
+      </header>
+
+  <nav>
+    <a href="#sobre">Sobre</a>
+    <a href="#tipos">Tipos</a>
+    <a href="#beneficios">Benefícios</a>
+    <a href="#contato">Contato</a>
+    <a href="#modelagem">Modelagem 3D</a>
+  </nav>
+
+  <section id="sobre">
+    <h2>Sobre Silos de Grãos</h2>
+    <p>
+        Silos de grãos são estruturas de armazenamento projetadas para preservar e proteger grandes
+        quantidades de grãos, como trigo, milho, arroz, entre outros. Geralmente, são feitos de metal, concreto ou aço
+        e vêm em diferentes tamanhos e formatos, desde unidades pequenas até grandes instalações industriais. Eles ajudam a
+        manter os grãos secos, protegidos de pragas, como insetos e roedores, e preservam sua qualidade até que sejam utilizados ou comercializados.</p>
+        <img src="silo.jpg" alt="Silo de Grãos" style="width: 100%; max-width: 500px; display: block; margin: 20px auto;">
+  </section>
+
+  <section id="modelagem">
+    <h2>Modelagem 3D</h2>
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+        <img src="img 1.png" style="width:60%">
+      </div>
+      <div class="mySlides fade">
+        <img src="img2.png" style="width:60%">
+      </div>
+      <div class="mySlides fade">
+        <img src="img3.png" style="width:60%">
+      </div>
+      <div class="mySlides fade">
+        <img src="img4.png" style="width:60%">
+      </div>
+    </div>
+    <br>
+    <div style="text-align:center">
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+  </section>
+
+  <script>
+    let slideIndex = 0;
+    showSlides();
+  
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      
+      slideIndex++;
+      if (slideIndex > slides.length) {
+        slideIndex = 1;
+      }
+      
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+      setTimeout(showSlides, 2000); // Altere o tempo de exibição de cada imagem aqui (em milissegundos)
+    }
+  </script>
+
+  <section id="tipos">
+    <h2>Proposta</h2>
+    <p>Volume</p>
+    <p>Altura</p>
+    <p>Raio</p>
+    <p>Custo</p>
+  </section>
+
+  <section id="beneficios">
+    <h2>Benefícios do Armazenamento em Silos</h2>
+    <ol>
+      <li>Armazenamento seguro: Protegem os grãos da umidade, insetos, roedores e outros fatores ambientais que podem comprometer sua qualidade.</li>
+      <li>Preservação da qualidade: Ao manter condições adequadas de temperatura e umidade, os silos ajudam a preservar a qualidade dos grãos, evitando deterioração e perda de valor nutricional.</li>
+      <li>Gerenciamento eficiente: Permitem o armazenamento em grande escala e o gerenciamento adequado dos estoques, facilitando o controle e a organização dos grãos.</li>
+      <li>Redução de perdas: Minimizam as perdas devido a danos, deterioração ou contaminação, o que é especialmente crucial em regiões onde a produção excede a demanda imediata.</li>
+      <li>Facilitam o comércio: A capacidade de armazenar grandes volumes de grãos por períodos prolongados ajuda no planejamento e na logística do comércio, permitindo a distribuição em momentos estratégicos para atender à demanda.</li>
+      <li>Economia de espaço e custos: Concentrar grandes quantidades de grãos em um local específico reduz os custos de armazenamento e libera espaço nas áreas de produção.</li>
+    </ol>
+  </section>
+
+  <section id="contato">
+    <h2>Contato</h2>
+    <p>Para mais informações, entre em contato conosco</p>
+    <p>Email: contato@silosagrarios.com.br</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2023 Silo de Grãos - Todos os direitos reservados.</p>
+  </footer>
+
+</body>
+</html>
